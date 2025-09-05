@@ -1,0 +1,157 @@
+.ticket-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.ticket-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.priority-badge, .status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.priority-high {
+  background: #dc3545;
+  color: white;
+}
+
+.priority-medium {
+  background: #ffc107;
+  color: #212529;
+}
+
+.priority-low {
+  background: #28a745;
+  color: white;
+}
+
+.status-open {
+  background: #17a2b8;
+  color: white;
+}
+
+.status-progress {
+  background: #fd7e14;
+  color: white;
+}
+
+.status-closed {
+  background: #6c757d;
+  color: white;
+}
+
+.ticket-content {
+  margin-bottom: 20px;
+}
+
+.ticket-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+}
+
+.ticket-description {
+  color: #666;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ticket-date {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+}
+
+.ticket-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-edit {
+  background: #007bff;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #0056b3;
+}
+
+.btn-status {
+  background: #28a745;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.btn-status:hover {
+  background: #1e7e34;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #c82333;
+}
+
+@media (max-width: 480px) {
+  .ticket-card {
+    padding: 15px;
+  }
+  
+  .ticket-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .ticket-actions {
+    justify-content: stretch;
+  }
+  
+  .btn {
+    flex: 1;
+    min-width: 0;
+  }
+}
